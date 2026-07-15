@@ -109,7 +109,7 @@ function DoctorsSection() {
           <h2 className="font-headline-md text-headline-md text-primary mb-4">{doctorsSection.title}</h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">{doctorsSection.description}</p>
         </div>
-        <div className={doctorsData.length === 1 ? "max-w-4xl mx-auto" : "grid grid-cols-1 lg:grid-cols-2 gap-12"}>
+        <div className="flex flex-col gap-12 max-w-5xl mx-auto">
           {doctorsData.map((doc, idx) => (
             <div key={idx} className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-clinical hover:shadow-modal transition-all border border-outline-variant/10 flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center">
               <div className="w-48 h-48 md:w-72 md:h-72 rounded-3xl overflow-hidden shrink-0 shadow-md bg-surface mx-auto md:mx-0">
