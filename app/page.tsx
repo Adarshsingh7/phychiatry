@@ -1,7 +1,7 @@
 import Script from "next/script";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./components/site-chrome";
-import { blogData, homeData } from "@/lib/site-data";
+import { blogData, homeData, doctorsData } from "@/lib/site-data";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         <HeroSection />
         <StatsSection />
         <DoctorProfileSection />
-        <NeurosurgeryServicesSection />
+        <ClinicServicesSection />
         <ConditionsTreatedSection />
         <AdvancedTechnologySection />
         <PatientJourneySection />
@@ -74,6 +74,8 @@ function HeroSection() {
               d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,76.4,-44.7C83.6,-31.3,86.9,-15.7,85.2,-0.9C83.6,13.8,77.1,27.7,68.2,39.3C59.3,50.9,48.1,60.2,35.5,67.6C22.9,75,8.9,80.5,-5.8,80.5C-20.5,80.5,-35.9,75,-48.9,67.3C-61.9,59.6,-72.5,49.7,-79.8,37.3C-87.1,24.9,-91.1,10,-90,-4.5C-88.9,-19,-82.7,-33.1,-73.4,-45C-64.1,-56.9,-51.7,-66.6,-38.3,-73.8C-24.9,-81,-10.7,-85.7,2.2,-89.5C15.1,-93.3,31.3,-83.6,44.7,-76.4Z"
               fill="#89f5e7" transform="translate(100 100)"></path>
           </svg>
+
+
         </div>
       </section>
     </>
@@ -98,45 +100,53 @@ function StatsSection() {
 }
 
 function DoctorProfileSection() {
-  const { doctorProfile } = homeData;
   return (
     <>
-      <section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface">
-        <div className="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
-          <div className="w-full md:w-1/2 relative reveal-card reveal-delay-100">
-            <div className="aspect-square rounded-2xl overflow-hidden shadow-modal">
-              <img alt={doctorProfile.name} className="w-full h-full object-cover" src={doctorProfile.image} />
-            </div>
-            <div className="absolute -bottom-6 -right-6 bg-secondary text-on-secondary p-8 rounded-2xl hidden md:block shadow-clinical">
-              <p className="font-headline-sm text-headline-sm mb-1">{doctorProfile.badgeTitle}</p>
-              <p className="font-body-md text-body-md opacity-90">{doctorProfile.badgeDesc}</p>
-            </div>
-          </div>
-          <div className="w-full md:w-1/2 reveal-card reveal-delay-200">
-            <span className="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">{doctorProfile.tagline}</span>
-            <h2 className="font-headline-md text-headline-md text-primary mb-6">{doctorProfile.name}</h2>
-            <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
-              {doctorProfile.description}
-            </p>
-            <ul className="space-y-4 mb-10">
-              {doctorProfile.bulletPoints.map((bp, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-secondary">{bp.icon}</span>
-                  <span className="font-label-md text-label-md text-on-surface">{bp.text}</span>
-                </li>
-              ))}
-            </ul>
-            <Link href={doctorProfile.link} className="text-primary font-label-md text-label-md flex items-center gap-2 hover:gap-4 transition-all">
-              {doctorProfile.ctaText} <span className="material-symbols-outlined">arrow_forward</span>
-            </Link>
-          </div>
+      <section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface space-y-24">
+        <div className="max-w-container-max mx-auto text-center mb-10">
+          <span className="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">Meet Our Specialists</span>
+          <h2 className="font-headline-md text-headline-md text-primary font-bold">Our Leading Medical Practitioners</h2>
         </div>
+        {doctorsData.map((doc, idx) => {
+          const isEven = idx % 2 === 0;
+          return (
+            <div key={doc.slug} className={`max-w-container-max mx-auto flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-16`}>
+              <div className="w-full md:w-1/2 relative reveal-card reveal-delay-100">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-modal bg-surface">
+                  <img alt={doc.name} className="w-full h-full object-cover" src={doc.image} />
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-secondary text-on-secondary p-6 rounded-2xl hidden md:block shadow-clinical">
+                  <p className="font-headline-sm text-headline-sm mb-1">{doc.badgeTitle}</p>
+                  <p className="font-body-md text-body-md opacity-90">{doc.badgeDesc}</p>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 reveal-card reveal-delay-200">
+                <span className="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">{doc.tagline}</span>
+                <h2 className="font-headline-md text-headline-md text-primary mb-6">{doc.name}</h2>
+                <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                  {doc.biography}
+                </p>
+                <ul className="space-y-4 mb-10">
+                  {doc.bulletPoints.map((bp, bpIdx) => (
+                    <li key={bpIdx} className="flex items-center gap-3">
+                      <span className="material-symbols-outlined text-secondary">{bp.icon}</span>
+                      <span className="font-label-md text-label-md text-on-surface">{bp.text}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link href={`/doctor/${doc.slug}`} className="text-primary font-label-md text-label-md flex items-center gap-2 hover:gap-4 transition-all font-bold">
+                  View Full Clinical Profile <span className="material-symbols-outlined">arrow_forward</span>
+                </Link>
+              </div>
+            </div>
+          );
+        })}
       </section>
     </>
   );
 }
 
-function NeurosurgeryServicesSection() {
+function ClinicServicesSection() {
   const { services } = homeData;
   const blogImagesBySlug = new Map(blogData.map((blog) => [blog.slug, blog.image]));
 
@@ -413,7 +423,7 @@ function ContactMapSection() {
           <div className="lg:col-span-8 reveal-card reveal-delay-200">
             <div className="h-full min-h-[320px] bg-surface-container rounded-2xl md:rounded-3xl overflow-hidden relative border border-outline-variant/20 shadow-clinical md:min-h-[400px]">
               <iframe
-                src="https://maps.google.com/maps?q=Shreyas%20Neuro%20%26%20Spine%20Clinic,%20Sector%20-11,%20Indira%20Nagar,%20Lucknow&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Avtar%20Health%20Care%20Clinic,%20Kaushalpuri,%20Khargapur,%20Gomti%20Nagar,%20Lucknow&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full min-h-[320px] border-0 opacity-95 md:min-h-[400px]"
                 allowFullScreen={true}
                 loading="lazy"

@@ -132,7 +132,7 @@ function InteractiveMapSection() {
     <section className="pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-surface">
       <div className="h-[450px] bg-surface-container rounded-3xl overflow-hidden relative border border-outline-variant/20 shadow-clinical">
         <iframe
-          src="https://maps.google.com/maps?q=Shreyas%20Neuro%20%26%20Spine%20Clinic,%20Sector%20-11,%20Indira%20Nagar,%20Lucknow&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=Avtar%20Health%20Care%20Clinic,%20Kaushalpuri,%20Khargapur,%20Gomti%20Nagar,%20Lucknow&t=&z=16&ie=UTF8&iwloc=&output=embed"
           className="w-full h-full border-0 opacity-95"
           allowFullScreen={true}
           loading="lazy"

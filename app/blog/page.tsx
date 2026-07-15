@@ -109,11 +109,11 @@ export default function BlogListPage() {
               {filteredBlogs.map((blog) => {
                 // Determine badge color styling based on category
                 let badgeClass = "bg-secondary-container text-on-secondary-container";
-                if (blog.category === "Brain Surgery") {
+                if (blog.category === "Neuro-Psychiatry") {
                   badgeClass = "bg-primary-container text-primary-fixed";
-                } else if (blog.category === "Pediatric Neurology") {
+                } else if (blog.category === "De-Addiction") {
                   badgeClass = "bg-error-container text-on-error-container";
-                } else if (blog.category === "Therapy & Metabolic") {
+                } else if (blog.category === "Therapy & Counseling") {
                   badgeClass = "bg-tertiary-fixed text-on-tertiary-fixed";
                 }
 

@@ -158,7 +158,7 @@ function FacilitySection() {
         </div>
         <div className="order-1 lg:order-2 relative">
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl"></div>
-          <img alt="Shreyas Clinic Facility" className="rounded-2xl shadow-clinical relative z-10 w-full h-[380px] object-cover" src={facility.image} />
+          <img alt="Avtar Clinic Facility" className="rounded-2xl shadow-clinical relative z-10 w-full h-[380px] object-cover" src={facility.image} />
         </div>
       </div>
     </section>

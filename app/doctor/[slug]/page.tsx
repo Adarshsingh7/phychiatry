@@ -98,7 +98,7 @@ export default function DoctorProfilePage({
               }`}
               onClick={() => setActiveTab("clinical")}
             >
-              Clinical Profile & Endoscopy
+              {doctor.tabLabel || "Clinical Profile & Endoscopy"}
             </button>
             <button
               className={`pb-4 px-6 font-label-md text-label-md font-bold transition-all relative shrink-0 cursor-pointer ${
@@ -143,7 +143,7 @@ export default function DoctorProfilePage({
                   <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-clinical border border-outline-variant/15">
                     <h2 className="font-headline-sm text-headline-sm text-primary mb-5 flex items-center gap-3">
                       <span className="material-symbols-outlined text-secondary text-2xl">healing</span>
-                      Spine Endoscopy & Surgical Focus
+                      {doctor.clinicalFocusTitle || "Spine Endoscopy & Surgical Focus"}
                     </h2>
                     <ul className="space-y-4">
                       {doctor.spineEndoscopy.map((item, idx) => (

@@ -196,8 +196,8 @@ header button.bg-secondary {
 
 main > section:first-of-type h2.text-headline-lg-mobile,
 main > section:first-of-type h2.md\:text-headline-lg {
-  font-size: 64px !important;
-  line-height: 72px !important;
+  font-size: 48px !important;
+  line-height: 56px !important;
   font-weight: 800 !important;
   letter-spacing: -0.02em !important;
 }
@@ -228,8 +228,8 @@ main h4.font-label-md.text-label-md {
 @media (max-width: 767px) {
   main > section:first-of-type h2.text-headline-lg-mobile,
   main > section:first-of-type h2.md\:text-headline-lg {
-    font-size: 40px !important;
-    line-height: 48px !important;
+    font-size: 32px !important;
+    line-height: 40px !important;
   }
 
   main h2.text-headline-md {

@@ -19,7 +19,9 @@ export default function BlogDetailPage({
   }
 
   // Determine doctor based on blog category
-  const doctorSlug = blog.category === "Therapy & Metabolic" ? "dr-stuti-kumari" : "dr-surjeet-singh";
+  const doctorSlug = (blog.category === "General Health" || blog.category === "Therapy & Counseling") 
+    ? "dr-preeti-chaudhary" 
+    : "dr-nilesh-kumar-kanaujiya";
   const doctor = doctorsData.find((d) => d.slug === doctorSlug) || doctorsData[0];
 
   // Accordion state for FAQs
@@ -33,11 +35,11 @@ export default function BlogDetailPage({
 
   // Determine badge styling based on category
   let badgeClass = "bg-secondary-container text-on-secondary-container";
-  if (blog.category === "Brain Surgery") {
+  if (blog.category === "Neuro-Psychiatry") {
     badgeClass = "bg-primary-container text-primary-fixed";
-  } else if (blog.category === "Pediatric Neurology") {
+  } else if (blog.category === "De-Addiction") {
     badgeClass = "bg-error-container text-on-error-container";
-  } else if (blog.category === "Therapy & Metabolic") {
+  } else if (blog.category === "Therapy & Counseling") {
     badgeClass = "bg-tertiary-fixed text-on-tertiary-fixed";
   }
 
@@ -131,15 +133,15 @@ export default function BlogDetailPage({
                 </div>
                 <div>
                   <h2 className="font-headline-sm text-headline-sm text-primary font-bold">
-                    Non-Surgical Care
+                    {(detailPage as any).nonSurgicalTitle || "Non-Surgical Care"}
                   </h2>
                   <span className="font-label-sm text-label-sm text-on-surface-variant">
-                    First-line & Conservative Management
+                    {(detailPage as any).nonSurgicalSubtitle || "First-line & Conservative Management"}
                   </span>
                 </div>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
-                Conservative and rehabilitative pathways focused on reducing irritation, relieving pressure, and building long-term core stability.
+                {(detailPage as any).nonSurgicalDesc || "Conservative and rehabilitative pathways focused on reducing irritation, relieving pressure, and building long-term core stability."}
               </p>
               <ul className="space-y-4 mt-auto">
                 {blog.nonSurgical.map((item, idx) => (
@@ -168,15 +170,15 @@ export default function BlogDetailPage({
                 </div>
                 <div>
                   <h2 className="font-headline-sm text-headline-sm text-primary font-bold">
-                    Surgical Interventions
+                    {(detailPage as any).surgicalTitle || "Surgical Interventions"}
                   </h2>
                   <span className="font-label-sm text-label-sm text-on-surface-variant">
-                    Advanced & Minimally Invasive Procedures
+                    {(detailPage as any).surgicalSubtitle || "Advanced & Minimally Invasive Procedures"}
                   </span>
                 </div>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
-                Precision surgical options using state-of-the-art keyhole approaches, robotic platforms, and microsurgical stabilization.
+                {(detailPage as any).surgicalDesc || "Precision surgical options using state-of-the-art keyhole approaches, robotic platforms, and microsurgical stabilization."}
               </p>
               <ul className="space-y-4 mt-auto">
                 {blog.surgical.map((item, idx) => (

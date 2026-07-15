@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: `${globalData.brandName} | Dr. Surjeet Singh`,
-  description: "Advanced brain, spine & diagnostic care by Dr. Surjeet Singh (MS, MCh Neurosurgery) and Dr. Stuti Kumari (MBBS, MD BHU) in Indira Nagar, Lucknow.",
+  title: `${globalData.brandName} | Dr. Nilesh Kumar Kanaujiya & Dr. Preeti Chaudhary`,
+  description: "Comprehensive psychiatric care, de-addiction therapy, and general medicine services by Dr. Nilesh Kumar Kanaujiya (MBBS, MD Neuro-psychiatry, MIPS) and Dr. Preeti Chaudhary (BAMS, General Physician) in Gomti Nagar, Lucknow.",
 };
 
 export default function RootLayout({
