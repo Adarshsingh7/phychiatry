@@ -64,7 +64,7 @@ export const homeData = {
     tagline: "Lead Consultant Neuro-psychiatrist",
     name: "Dr. Nilesh Kumar Kanaujiya, MBBS, MD, MIPS",
     description: "Dr. Nilesh Kumar Kanaujiya is a leading consultant neuro-psychiatrist specializing in clinical psychiatry, substance de-addiction, child behavior disorders, and mental wellness. Operating in Gomti Nagar, Lucknow, he is dedicated to restoring psychological balance and supporting families through recovery.",
-    image: "/dr-nilesh-kumar-kanaujiya.png",
+    image: "/dr-nilesh-kumar-kanaujiya.jpeg",
     badgeTitle: "Board Certified",
     badgeDesc: "MD Neuro-Psychiatry Specialist",
     bulletPoints: [
@@ -80,16 +80,16 @@ export const homeData = {
     title: "Psychiatric, De-Addiction & Family Medical Care",
     items: [
       {
-        title: "Neuro-Psychiatry",
-        description: "Specialized clinical treatment for depression, anxiety, panic disorders, OCD, schizophrenia, and bipolar disorder.",
-        icon: "psychology",
-        link: "/blog/depression-and-mood-disorders"
+        title: "Psycho-Sexual Disorder",
+        description: "Professional and confidential clinical support for sexual dysfunctions, psychosexual concerns, and related relationship challenges.",
+        icon: "favorite",
+        link: "/blog/psycho-sexual-disorder"
       },
       {
-        title: "De-Addiction Centre",
-        description: "Medically monitored detoxification, counseling, and relapse prevention for alcohol, tobacco, and substance dependency.",
-        icon: "healing",
-        link: "/blog/alcohol-substance-de-addiction"
+        title: "Holistic Ayurvedic Care",
+        description: "Traditional Ayurvedic consultations, herbal wellness strategies, and mind-body balance programs for comprehensive mental and physical health.",
+        icon: "eco",
+        link: "/blog/holistic-ayurvedic-care"
       },
       {
         title: "General Medicine",
@@ -121,13 +121,17 @@ export const homeData = {
     title: "Conditions We Treat",
     description: "We provide diagnosis and compassionate treatment for a wide spectrum of psychiatric, behavioral, and general medical conditions.",
     buttonText: "View Condition Guide",
+    href:'/conditions',
     items: [
-      "Anxiety & Depression",
-      "Alcohol & Substance Addiction",
-      "ADHD & Childhood Behavior",
-      "Migraines & Chronic Headaches",
-      "Insomnia & Sleep Disorders",
-      "Hypertension & Lifestyle Illnesses"
+      "OCD",
+      "Schizophrenia",
+      "Seizure Disorder",
+      "Psycho-sexual Disorder",
+      "Dementia and Alzheimer Disorder",
+      "Psycho-Somatic and Chronic pain Disorder",
+      "Counselling and Psychotherapy",
+      "General medicine",
+      "Holistic Ayurvedic Care for a Healthier Mind and Body"
     ]
   },
   technology: {
@@ -555,6 +559,80 @@ export interface BlogEntry {
 
 export const blogData: BlogEntry[] = [
   {
+    slug: "psycho-sexual-disorder",
+    title: "Understanding Psycho-Sexual Disorders & Clinical Care",
+    category: "Neuro-Psychiatry",
+    cardDescription: "A comprehensive guide on symptoms, psychological components of sexual health, and expert therapy.",
+    fullDescription: "Psycho-sexual disorders can deeply impact personal relationships, self-esteem, and mental health. These concerns often stem from a combination of psychological, relationship, and physical factors. Our clinic provides a confidential, scientific, and compassionate approach to diagnosis, counselling, and medical treatments to restore confidence and relationship harmony.",
+    image: "/psycho-sexual-disorder.png",
+    symptoms: [
+      "Erectile dysfunction or premature ejaculation with psychological root causes",
+      "Loss of sexual desire (hypoactive sexual desire disorder)",
+      "Performance anxiety and stress related to intimacy",
+      "Pain or discomfort during intimacy (vaginismus or dyspareunia)"
+    ],
+    nonSurgical: [
+      "Cognitive Behavioral Therapy (CBT) and psychosexual therapy",
+      "Sensate focus techniques and mindfulness exercises",
+      "Relationship and couples counselling to resolve intimacy blocks",
+      "Stress reduction and performance anxiety management"
+    ],
+    surgical: [
+      "Comprehensive medical and hormonal evaluations",
+      "Evidence-based pharmacotherapy for erectile dysfunction or anxiety",
+      "Addressing underlying psychiatric causes like depression or OCD",
+      "Consistent follow-ups and medicine management"
+    ],
+    recoverySteps: [
+      "Confidential and detailed clinical history check-up",
+      "Identifying physical vs. psychological contributing factors",
+      "Setting up a combined medical and psychosexual counselling plan",
+      "Regular progress tracking and relationship integration support"
+    ],
+    faqs: [
+      { question: "Are psycho-sexual disorders common?", answer: "Yes, psychosexual concerns are highly common but often underreported due to social stigma. They are highly treatable with professional help." },
+      { question: "What is performance anxiety in intimacy?", answer: "Performance anxiety is a psychological block where fear of not performing well leads to physical difficulties. Counselling is very effective in resolving this." },
+      { question: "How long does psychosexual therapy take?", answer: "Depending on the complexity, therapy can range from a few weeks to several months, showing progressive improvements along the way." }
+    ]
+  },
+  {
+    slug: "holistic-ayurvedic-care",
+    title: "Integrating Holistic Ayurvedic Care for Mind & Body",
+    category: "General Health",
+    cardDescription: "Explore traditional Ayurvedic wellness, lifestyle changes, and herbal therapies for physical and mental balance.",
+    fullDescription: "Holistic Ayurvedic care focuses on achieving a balance between mind, body, and consciousness. Through BAMS-certified consultations, we integrate traditional wellness principles with modern lifestyles, managing stress, chronic fatigue, and lifestyle conditions like diabetes and hypertension naturally.",
+    image: "/holistic-ayurvedic-care.png",
+    symptoms: [
+      "Chronic fatigue, low energy levels, and persistent stress",
+      "Imbalances in digestion, metabolism, or appetite",
+      "Lifestyle conditions like mild hypertension or fluctuating thyroid levels",
+      "Sleep issues, restlessness, and lack of mental clarity"
+    ],
+    nonSurgical: [
+      "Personalized dietary guidelines and Ayurvedic nutrition plans",
+      "Daily routine guidelines (Dinacharya) for healthy living",
+      "Yoga, meditation, and pranayama (breathing exercises) for stress",
+      "Natural herbal supplements and wellness formulations"
+    ],
+    surgical: [
+      "Comprehensive Ayurvedic constitution (Prakriti) assessment",
+      "Holistic consultation for lifestyle disease management",
+      "Regular health monitoring and vitals tracking",
+      "Coordinated care integrating modern and traditional approaches"
+    ],
+    recoverySteps: [
+      "Detailed analysis of Prakriti (body type) and lifestyle habits",
+      "Formulating a customized herbal, dietary, and routine plan",
+      "Gradual detoxifying lifestyle changes and stress management",
+      "Monthly wellness check-ups to track vitality and health"
+    ],
+    faqs: [
+      { question: "What is the focus of Holistic Ayurvedic Care?", answer: "It focuses on addressing the root causes of imbalances in the body using natural diet, lifestyle routines, and herbal formulations to promote wellness." },
+      { question: "Can Ayurveda help with lifestyle diseases?", answer: "Yes. Lifestyle diseases like diabetes, hypertension, and thyroid disorders respond exceptionally well to Ayurvedic lifestyle modifications and dietary care." },
+      { question: "Are Ayurvedic herbs safe to take with general medicines?", answer: "Under the supervision of our qualified physician, Dr. Preeti Chaudhary, Ayurvedic treatments can be safely integrated with other therapies." }
+    ]
+  },
+  {
     slug: "depression-and-mood-disorders",
     title: "Understanding Depression & Mood Disorders",
     category: "Neuro-Psychiatry",
@@ -728,7 +806,7 @@ export const doctorsData: DoctorProfile[] = [
     slug: "dr-nilesh-kumar-kanaujiya",
     name: "Dr. Nilesh Kumar Kanaujiya, MBBS, MD, MIPS",
     tagline: "Consultant Neuro-psychiatrist & De-addiction Specialist",
-    image: "/dr-nilesh-kumar-kanaujiya.png",
+    image: "/dr-nilesh-kumar-kanaujiya.jpeg",
     badgeTitle: "MD Neuro-Psychiatry",
     badgeDesc: "Consultant Psychiatrist",
     bulletPoints: [
@@ -784,7 +862,7 @@ export const doctorsData: DoctorProfile[] = [
     slug: "dr-preeti-chaudhary",
     name: "Dr. Preeti Chaudhary, BAMS",
     tagline: "Consultant General Physician",
-    image: "/dr-preeti-chaudhary.png",
+    image: "/dr-preeti-chaudhary.jpeg",
     badgeTitle: "BAMS",
     badgeDesc: "General Physician",
     bulletPoints: [
@@ -944,14 +1022,14 @@ export const galleryData = {
       description: "Advanced digital EEG equipment used for diagnosing sleep disorders, seizures, and cognitive activity."
     },
     {
-      src: "/dr-nilesh-kumar-kanaujiya.png",
+      src: "/dr-nilesh-kumar-kanaujiya.jpeg",
       title: "Dr. Nilesh Kumar Kanaujiya",
       category: "Patient Care",
       size: "tall",
       description: "Dr. Nilesh in his private consultation room conducting a patient review."
     },
     {
-      src: "/dr-preeti-chaudhary.png",
+      src: "/dr-preeti-chaudhary.jpeg",
       title: "Dr. Preeti Chaudhary",
       category: "Patient Care",
       size: "normal",

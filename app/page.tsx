@@ -199,7 +199,7 @@ function ConditionsTreatedSection() {
           <div className="w-full md:w-1/3 reveal-card reveal-delay-100">
             <h2 className="font-headline-md text-headline-md text-primary mb-6">{conditions.title}</h2>
             <p className="text-body-lg text-on-surface-variant mb-8">{conditions.description}</p>
-            <button className="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md">{conditions.buttonText}</button>
+            <Link href={conditions.href} className="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md inline-block text-center">{conditions.buttonText}</Link>
           </div>
           <div className="w-full md:w-2/3 grid grid-cols-2 gap-3 md:gap-4">
             {conditions.items.map((item, idx) => (
