@@ -18,7 +18,7 @@ export const globalData = {
     { label: "Contact Us", href: "/contact", key: "contact" }
   ] as NavItem[],
   footer: {
-    logoImage: "/clinic-entrance.jpg",
+    logoImage: "/brain-wellness.png",
     brandName: "Avtar Health Care Clinic",
     description: "Comprehensive neuro-psychiatry, de-addiction, and family medicine services by Dr. Nilesh Kumar Kanaujiya and Dr. Preeti Chaudhary in Gomti Nagar, Lucknow.",
     socialLinks: [
@@ -121,7 +121,7 @@ export const homeData = {
     title: "Conditions We Treat",
     description: "We provide diagnosis and compassionate treatment for a wide spectrum of psychiatric, behavioral, and general medical conditions.",
     buttonText: "View Condition Guide",
-    href:'/conditions',
+    href: '/conditions',
     items: [
       "OCD",
       "Schizophrenia",
@@ -280,7 +280,8 @@ export const homeData = {
     mapImage: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=800&q=80",
     mapAlt: "Avtar Health Care Clinic Consultation Office in Gomti Nagar, Lucknow",
     mapLocation: "Gomti Nagar, Lucknow",
-    pinLabel: "Avtar Health Care Clinic"
+    pinLabel: "Avtar Health Care Clinic",
+    mapEmbedUrl: "https://maps.google.com/maps?q=26.8438297,81.0238095&z=17&hl=en&output=embed"
   }
 };
 
@@ -861,7 +862,7 @@ export const doctorsData: DoctorProfile[] = [
   {
     slug: "dr-preeti-chaudhary",
     name: "Dr. Preeti Chaudhary, BAMS",
-    tagline: "Consultant General Physician",
+    tagline: "Holistic Ayurvedic Care",
     image: "/dr-preeti-chaudhary.jpeg",
     badgeTitle: "BAMS",
     badgeDesc: "General Physician",
@@ -952,7 +953,7 @@ export const aboutData = {
       "Standardized Psychometric Testing",
       "Comfortable Waiting Areas"
     ],
-    image: "/clinic-entrance.jpg"
+    image: "/therapy-room.png"
   }
 };
 
@@ -990,7 +991,7 @@ export const galleryData = {
     tagline: "Visual Tour",
     title: "Our Gallery",
     description: "Take a visual tour of Avtar Health Care Clinic, highlighting our consultation suites, brain wave diagnostics, and patient care rooms.",
-    backgroundImage: "/clinic-exterior.jpg"
+    backgroundImage: "/serene-wellness.png"
   },
   categories: [
     { key: "All", label: "All Photos" },
@@ -1001,18 +1002,18 @@ export const galleryData = {
   ],
   items: [
     {
-      src: "/clinic-exterior.jpg",
-      title: "Clinic Exterior",
-      category: "Facility",
+      src: "/serene-wellness.png",
+      title: "Serene Mindfulness Landscape",
+      category: "Patient Care",
       size: "wide",
-      description: "Our clinic exterior in Gomti Nagar, Lucknow, providing a peaceful environment for mental and physical healthcare."
+      description: "A calming nature environment symbolizing mental peace, clarity, and mindfulness."
     },
     {
-      src: "/clinic-entrance.jpg",
-      title: "Reception Desk",
+      src: "/therapy-room.png",
+      title: "Therapy Consultation Room",
       category: "Facility",
       size: "normal",
-      description: "Worry-free waiting area designed to ensure patient comfort and complete privacy."
+      description: "A comfortable and warm space designed for private counseling, therapy sessions, and psychiatric consultation."
     },
     {
       src: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=800&q=80",
@@ -1041,6 +1042,13 @@ export const galleryData = {
       category: "Patient Care",
       size: "wide",
       description: "Providing cognitive behavioral therapy and counseling to patients and their families."
+    },
+    {
+      src: "/brain-wellness.png",
+      title: "Holistic Mental Growth",
+      category: "Technology",
+      size: "normal",
+      description: "Symbolic illustration of brain wellness, showing cognitive recovery, growth, and psychiatric healing."
     }
   ] as GalleryItem[]
 };

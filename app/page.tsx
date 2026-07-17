@@ -423,7 +423,7 @@ function ContactMapSection() {
           <div className="lg:col-span-8 reveal-card reveal-delay-200">
             <div className="h-full min-h-[320px] bg-surface-container rounded-2xl md:rounded-3xl overflow-hidden relative border border-outline-variant/20 shadow-clinical md:min-h-[400px]">
               <iframe
-                src="https://maps.google.com/maps?q=Avtar%20Health%20Care%20Clinic,%20Kaushalpuri,%20Khargapur,%20Gomti%20Nagar,%20Lucknow&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                src={contactMap.mapEmbedUrl}
                 className="w-full h-full min-h-[320px] border-0 opacity-95 md:min-h-[400px]"
                 allowFullScreen={true}
                 loading="lazy"
