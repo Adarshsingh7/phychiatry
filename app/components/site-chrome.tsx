@@ -43,19 +43,13 @@ export function SiteHeader({ active }: Readonly<{ active: ActivePage }>) {
     <>
       <header className="fixed top-0 w-full z-50 bg-white border-b border-surface-container-high dark:border-outline-variant h-20">
         <div className="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary-container flex items-center justify-center rounded-lg">
-              <span
-                className="material-symbols-outlined text-primary-fixed"
-                style={{ fontVariationSettings: `'FILL' 1` }}
-              >
-                {globalData.logoIcon}
-              </span>
-            </div>
-            <h1 className="font-headline-sm text-headline-sm font-bold text-black dark:text-black">
-              {globalData.brandName}
-            </h1>
-          </div>
+          <Link href="/" className="flex items-center">
+            <img
+              src="/logo.png"
+              alt="Avtar Health Care Clinic Logo"
+              className="h-14 w-auto object-contain"
+            />
+          </Link>
           <nav className="hidden md:flex items-center gap-8 font-label-md text-label-md">
             {globalData.navItems.map((item) => {
               const isActive = item.key === active;
@@ -140,8 +134,13 @@ export function SiteFooter() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-on-primary-fixed">
         <div className="md:col-span-1">
           <div className="flex items-center gap-3 mb-6">
-            {/* <img alt="Logo" className="w-12 h-12 object-contain brightness-0 invert" src={footer.logoImage} /> */}
-            <h4 className="font-headline-md text-headline-md font-extrabold text-primary-fixed">{footer.brandName}</h4>
+            <div className="bg-white p-2 rounded-xl inline-block shadow-sm">
+              <img
+                alt="Avtar Health Care Clinic Logo"
+                className="h-12 w-auto object-contain"
+                src={footer.logoImage}
+              />
+            </div>
           </div>
           <p className="font-body-md text-body-md text-on-primary-container leading-relaxed mb-6">
             {footer.description}

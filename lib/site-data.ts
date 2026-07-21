@@ -18,7 +18,7 @@ export const globalData = {
     { label: "Contact Us", href: "/contact", key: "contact" }
   ] as NavItem[],
   footer: {
-    logoImage: "/brain-wellness.png",
+    logoImage: "/logo.png",
     brandName: "Avtar Health Care Clinic",
     description: "Comprehensive neuro-psychiatry, de-addiction, and family medicine services by Dr. Nilesh Kumar Kanaujiya and Dr. Preeti Chaudhary in Gomti Nagar, Lucknow.",
     socialLinks: [
