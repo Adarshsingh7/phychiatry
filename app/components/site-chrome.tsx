@@ -130,8 +130,8 @@ export function SiteHeader({ active }: Readonly<{ active: ActivePage }>) {
 export function SiteFooter() {
   const { footer } = globalData;
   return (
-    <footer className="bg-primary-container dark:bg-tertiary-container w-full pt-16 pb-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-on-primary-fixed">
+    <footer className="bg-primary-container dark:bg-primary w-full pt-16 pb-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-primary-fixed-dim/90">
         <div className="md:col-span-1">
           <div className="flex items-center gap-3 mb-6">
             <div className="bg-white p-2 rounded-xl inline-block shadow-sm">
@@ -142,7 +142,7 @@ export function SiteFooter() {
               />
             </div>
           </div>
-          <p className="font-body-md text-body-md text-on-primary-container leading-relaxed mb-6">
+          <p className="font-body-md text-body-md text-primary-fixed-dim/80 leading-relaxed mb-6">
             {footer.description}
           </p>
           <div className="flex gap-4">
@@ -161,10 +161,10 @@ export function SiteFooter() {
         </div>
         <div>
           <h5 className="text-white font-label-md text-label-md uppercase tracking-widest mb-6">Patient Links</h5>
-          <ul className="space-y-3 font-body-md text-body-md text-on-primary-container">
+          <ul className="space-y-3 font-body-md text-body-md text-primary-fixed-dim/80">
             {footer.patientLinks.map((link) => (
               <li key={link.label}>
-                <a className="hover:text-primary-fixed-dim transition-colors hover:underline" href={link.href}>
+                <a className="hover:text-white transition-colors hover:underline" href={link.href}>
                   {link.label}
                 </a>
               </li>
@@ -173,7 +173,7 @@ export function SiteFooter() {
         </div>
         <div>
           <h5 className="text-white font-label-md text-label-md uppercase tracking-widest mb-6">Clinical Hours</h5>
-          <ul className="space-y-3 font-body-md text-body-md text-on-primary-container">
+          <ul className="space-y-3 font-body-md text-body-md text-primary-fixed-dim/80">
             {footer.clinicalHours.map((hour, idx) => (
               <li key={idx} className="flex justify-between">
                 <span>{hour.days}</span> <span>{hour.time}</span>
@@ -187,12 +187,12 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-16 pt-8 border-t border-outline-variant/10 text-center">
-        <p className="font-body-md text-body-md text-on-primary-container opacity-60">
+        <p className="font-body-md text-body-md text-primary-fixed-dim/60">
           {footer.copyright}
         </p>
-        <p className="mt-3 font-label-md text-label-md text-on-primary-container">
+        <p className="mt-3 font-label-md text-label-md text-primary-fixed-dim/80">
           <a
-            className="hover:text-primary-fixed-dim transition-colors hover:underline"
+            className="hover:text-white transition-colors hover:underline"
             href={footer.creditHref}
             target="_blank"
             rel="noreferrer"
