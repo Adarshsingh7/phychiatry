@@ -52,9 +52,9 @@ function HeroSection() {
             </div>
             <h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-6">
               {hero.title} <br />
-              <span className="text-secondary-fixed">{hero.titleAccent}</span>
+              <span className="text-white md:text-secondary-fixed">{hero.titleAccent}</span>
             </h2>
-            <p className="font-body-lg text-body-lg text-primary-fixed-dim/90 mb-10 max-w-lg leading-relaxed">
+            <p className="font-body-lg text-body-lg text-white md:text-primary-fixed-dim/90 mb-10 max-w-lg leading-relaxed">
               {hero.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

@@ -202,8 +202,10 @@ main > section:first-of-type h2.md\:text-headline-lg {
   letter-spacing: -0.02em !important;
 }
 
-main > section:first-of-type h2 span {
-  color: var(--color-secondary-fixed-dim) !important;
+@media (min-width: 768px) {
+  main > section:first-of-type h2 span {
+    color: var(--color-secondary-fixed-dim) !important;
+  }
 }
 
 main h2.text-headline-md {
