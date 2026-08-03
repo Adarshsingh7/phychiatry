@@ -201,7 +201,7 @@ function ConditionsTreatedSection() {
             <p className="text-body-lg text-on-surface-variant mb-8">{conditions.description}</p>
             <Link href={conditions.href} className="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md inline-block text-center">{conditions.buttonText}</Link>
           </div>
-          <div className="w-full md:w-2/3 grid grid-cols-2 gap-3 md:gap-4">
+          <div className="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
             {conditions.items.map((item, idx) => (
               <div key={idx} className={`flex items-start gap-2 p-4 bg-surface-container-low rounded-xl border border-outline-variant/10 md:items-center md:gap-4 md:p-6 reveal-card reveal-delay-${Math.min((idx + 1) * 100, 600)}`}>
                 <span className="material-symbols-outlined text-secondary text-base md:text-2xl">fiber_manual_record</span>

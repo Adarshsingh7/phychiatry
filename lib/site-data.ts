@@ -123,6 +123,11 @@ export const homeData = {
     buttonText: "View Condition Guide",
     href: '/conditions',
     items: [
+      "Anxiety Disorder",
+      "Depression",
+      "Alcohol and Opioid Addiction",
+      "Sleep Disorder",
+      "ADHD and Autism Spectrum Disorder",
       "OCD",
       "Schizophrenia",
       "Seizure Disorder",
