@@ -12,7 +12,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: `${globalData.brandName} | Dr. Nilesh Kumar Kanaujiya & Dr. Preeti Chaudhary`,
-  description: "Comprehensive psychiatric care, de-addiction therapy, and general medicine services by Dr. Nilesh Kumar Kanaujiya (MBBS, MD Neuro-psychiatry, MIPS) and Dr. Preeti Chaudhary (BAMS, General Physician) in Gomti Nagar, Lucknow.",
+  description: "Comprehensive psychiatric care, de-addiction therapy, and general medicine services by Dr. Nilesh Kumar Kanaujiya (MBBS, MD Neuro-psychiatry, MIPS), Dr. Preeti Chaudhary (BAMS, General Physician), and Dr. Akash Gupta (MBBS, General Physician) in Gomti Nagar, Lucknow.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -20,7 +20,7 @@ export const globalData = {
   footer: {
     logoImage: "/logo.png",
     brandName: "Avtar Health Care Clinic",
-    description: "Comprehensive neuro-psychiatry, de-addiction, and family medicine services by Dr. Nilesh Kumar Kanaujiya and Dr. Preeti Chaudhary in Gomti Nagar, Lucknow.",
+    description: "Comprehensive neuro-psychiatry, de-addiction, and family medicine services by Dr. Nilesh Kumar Kanaujiya, Dr. Preeti Chaudhary, and Dr. Akash Gupta in Gomti Nagar, Lucknow.",
     socialLinks: [
       { label: "Facebook", icon: "facebook", href: "https://facebook.com" },
       { label: "Instagram", icon: "instagram", href: "https://instagram.com" },
@@ -50,7 +50,7 @@ export const homeData = {
     tagline: "Avtar Health Care Clinic",
     title: "Neuro-Psychiatry, De-Addiction & Family Health.",
     titleAccent: "Healing Minds, Enhancing Physical Wellness.",
-    description: "Expert psychiatric treatment, de-addiction recovery programs, and family healthcare services led by Dr. Nilesh Kumar Kanaujiya and Dr. Preeti Chaudhary in Gomti Nagar, Lucknow.",
+    description: "Expert psychiatric treatment, de-addiction recovery programs, and family healthcare services led by Dr. Nilesh Kumar Kanaujiya, Dr. Preeti Chaudhary, and Dr. Akash Gupta in Gomti Nagar, Lucknow.",
     backgroundImage: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1600&q=80",
     primaryBtn: "Book a Consultation",
     secondaryBtn: "View Our Services"
@@ -58,7 +58,7 @@ export const homeData = {
   stats: [
     { value: "10+ Years", label: "Clinical Excellence" },
     { value: "15,000+", label: "Happy Patients" },
-    { value: "2", label: "Expert Doctors" }
+    { value: "3", label: "Expert Doctors" }
   ],
   doctorProfile: {
     tagline: "Lead Consultant Neuro-psychiatrist",
@@ -270,7 +270,8 @@ export const homeData = {
         title: "Phone & Contact",
         lines: [
           "Dr. Nilesh Kanaujiya: +91 8795028982",
-          "Dr. Preeti Chaudhary: +91 9696424349"
+          "Dr. Preeti Chaudhary: +91 9696424349",
+          "Dr. Akash Gupta: +91 8175972874"
         ]
       },
       {
@@ -911,6 +912,55 @@ export const doctorsData: DoctorProfile[] = [
     ],
     tabLabel: "Clinical Profile & General Medicine",
     clinicalFocusTitle: "General Medicine & Family Health Focus"
+  },
+  {
+    slug: "dr-akash-gupta",
+    name: "Dr. Akash Gupta, MBBS",
+    tagline: "General Physician",
+    image: "/dr-akash-gupta.webp",
+    badgeTitle: "MBBS",
+    badgeDesc: "General Physician",
+    bulletPoints: [
+      { icon: "verified", text: "General Physician & Primary Care" },
+      { icon: "local_hospital", text: "Ex Resident Doctor, Dr. RMLIMS Lucknow" },
+      { icon: "health_and_safety", text: "UPMC Reg No. 114137" }
+    ],
+    biography: "Dr. Akash Gupta is a qualified General Physician (MBBS) with clinical training from one of Lucknow's premier medical institutions. Having served as a Resident Doctor at Dr. Ram Manohar Lohia Institute of Medical Sciences (Dr. RMLIMS), Lucknow, Dr. Gupta brings strong primary care expertise, acute disease management skills, and a patient-first approach to Avtar Health Care Clinic.",
+    experience: [
+      "Ex Resident Doctor at Dr. RMLIMS Lucknow",
+      "General Physician at Avtar Health Care Clinic, Lucknow"
+    ],
+    education: [
+      "Bachelor of Medicine and Bachelor of Surgery (MBBS)",
+      "UPMC Registration No. 114137"
+    ],
+    spineEndoscopy: [
+      "Acute and Primary Care Medicine",
+      "Outpatient Clinical Management",
+      "Diagnosis and Treatment of Common Medical Conditions"
+    ],
+    projectsFieldWork: [
+      "Active contributor to community health camps organized by Avtar Health Care Clinic.",
+      "Participated in primary health screenings across Gomti Nagar, Lucknow."
+    ],
+    publications: [
+      "Contributions to clinical case reviews during residency at Dr. RMLIMS Lucknow."
+    ],
+    conferences: [
+      "Attended national medical conferences on primary care and acute medicine."
+    ],
+    paperPresentations: [
+      "'Primary Care Management in Urban Settings' — Regional General Medicine Forum"
+    ],
+    leadershipRoles: [
+      "General Physician, Avtar Health Care Clinic"
+    ],
+    associations: [
+      "Member, Indian Medical Association (IMA)",
+      "Registered under UPMC (Reg No. 114137)"
+    ],
+    tabLabel: "Clinical Profile & General Medicine",
+    clinicalFocusTitle: "General Medicine & Primary Care Focus"
   }
 ];
 
@@ -946,7 +996,7 @@ export const aboutData = {
   doctorsSection: {
     tagline: "Meet Our Specialists",
     title: "Led by Renowned Medical Practitioners",
-    description: "Our clinic is directed by Dr. Nilesh Kumar Kanaujiya and Dr. Preeti Chaudhary, combining psychiatry and general medicine for complete care."
+    description: "Our clinic is directed by Dr. Nilesh Kumar Kanaujiya, Dr. Preeti Chaudhary, and Dr. Akash Gupta, combining psychiatry, general medicine, and expert clinical care for complete support."
   },
   facility: {
     tagline: "Our Practice Facility",
@@ -1040,6 +1090,13 @@ export const galleryData = {
       category: "Patient Care",
       size: "normal",
       description: "Dr. Preeti providing consultation and diagnostic review for family medicine."
+    },
+    {
+      src: "/dr-akash-gupta.webp",
+      title: "Dr. Akash Gupta",
+      category: "Patient Care",
+      size: "normal",
+      description: "Dr. Akash Gupta, General Physician and Ex Resident Doctor at Dr. RMLIMS Lucknow."
     },
     {
       src: "/stitch/asset-07.jpg",
