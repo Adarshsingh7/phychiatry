@@ -917,7 +917,7 @@ export const doctorsData: DoctorProfile[] = [
     slug: "dr-akash-gupta",
     name: "Dr. Akash Gupta, MBBS",
     tagline: "General Physician",
-    image: "/dr-akash-gupta.webp",
+    image: "/dr-akash-gupta.jpg",
     badgeTitle: "MBBS",
     badgeDesc: "General Physician",
     bulletPoints: [
@@ -1092,7 +1092,7 @@ export const galleryData = {
       description: "Dr. Preeti providing consultation and diagnostic review for family medicine."
     },
     {
-      src: "/dr-akash-gupta.webp",
+      src: "/dr-akash-gupta.jpg",
       title: "Dr. Akash Gupta",
       category: "Patient Care",
       size: "normal",
